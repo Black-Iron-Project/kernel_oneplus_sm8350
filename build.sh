@@ -19,17 +19,17 @@ NC='\033[0m' # No color
 CURRENT_DIR="$(pwd)"
 
 # Check if already inside Neutrino_4.5.0
-[ "$(basename "$CURRENT_DIR")" = "Neutrino_4.5.0" ] && echo -e "${GREEN}Already inside Neutrino_4.5.0, skipping clone.${NC}" || {
-  # Check if the directory does not exist, then remove and clone it
-  [ ! -d "Neutrino_4.5.0" ] && {
-    echo -e "${GREEN}Cloning and removing Neutrino_4.5.0 directory...${NC}"
-    sudo rm -fr Neutrino_4.5.0 && git clone --depth=1 https://github.com/Madara273/Neutrino_4.5.0 -b lineage-22.1
-  }
+# [ "$(basename "$CURRENT_DIR")" = "Neutrino_4.5.0" ] && echo -e "${GREEN}Already inside Neutrino_4.5.0, skipping clone.${NC}" || {
+#  # Check if the directory does not exist, then remove and clone it
+#  [ ! -d "Neutrino_4.5.0" ] && {
+#    echo -e "${GREEN}Cloning and removing Neutrino_4.5.0 directory...${NC}"
+#    sudo rm -fr Neutrino_4.5.0 && git clone --depth=1 https://github.com/Madara273/Neutrino_4.5.0 -b lineage-22.1
+# }
 
-  # Enter the directory if not already inside
-  cd Neutrino_4.5.0
-  echo -e "${GREEN}Entering Neutrino_4.5.0 directory...${NC}"
-}
+#  # Enter the directory if not already inside
+# cd Neutrino_4.5.0
+# echo -e "${GREEN}Entering Neutrino_4.5.0 directory...${NC}"
+# }
 
 # Set Eastern Time timezone
 export TZ=Europe/Kiev # Enter your time zone
